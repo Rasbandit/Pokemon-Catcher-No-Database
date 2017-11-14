@@ -7,6 +7,8 @@ const teamManager = require('./controllers/teamManager');
 
 const app = express();
 
+app.use(express.static(`${__dirname}/../build`));
+
 app.use(bodyParser.json());
 app.use(cors());
 

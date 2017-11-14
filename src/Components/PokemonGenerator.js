@@ -14,9 +14,9 @@ export default class PokemonGenerator extends Component {
   // generate a random pokemon
   generatePokemon() {
     // we only want a pokemon from the original 151
-    const generationOne = 151;
+    const generationOne = 150;
     // generate a random bumber betwen 1-151
-    const randomPokemonNumber = Math.floor(Math.random() * generationOne);
+    const randomPokemonNumber = Math.ceil(Math.random() * generationOne);
     // run the service to get get pokemon from the pokeAPI
     getPokemon(randomPokemonNumber).then((response) => {
       // save the pokemon
